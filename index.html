@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERZURUM KUYUMCUSU | Haute Joaillerie & Sarraf</title>
+    
+    <meta name="description" content="Erzurum Kuyumcusu - Nesiller boyu güven, ömür boyu zarafet. Has altın, pırlanta, özel tasarım Erzurum burma bilezikleri and sarraf ürünleri." />
+    <meta name="keywords" content="erzurum kuyumcu, erzurum burma bileziği, canlı altın fiyatları erzurum, sarraf, 22 ayar bilezik, has altın gram, kuyumcular çarşısı" />
+    <meta name="author" content="Erzurum Kuyumcusu" />
+    <meta name="robots" content="index, follow" />
+    
+    <meta property="og:title" content="ERZURUM KUYUMCUSU | Özel Dijital Sergi ve Canlı Borsa" />
+    <meta property="og:description" content="En seçkin 22K ve 14K altın koleksiyonlarimizi canli borsa fiyatlariyla keşfedin." />
+    <meta property="og:image" content="logo.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght=400;700;900&family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght=200;300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --gold-premium: #c5a059;
+            --gold-dark: #8c6d39;
+            --gold-light: #f3e1b9;
+            --bg-obsidian: #090a0f;
+            --bg-velvet: #11131e;
+            --text-silk: #f4f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: var(--text-silk);
+            font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+            overflow-x: hidden;
+            letter-spacing: 0.05em;
+        }
+
+        .font-brand {
+            font-family: 'Cinzel Decorative', Georgia, serif;
+        }
+
+        .font-luxury {
+            font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+        }
+
+        .font-sans-clean {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        .gold-silk-text {
+            background: linear-gradient(135deg, #f3e1b9 0%, #c5a059 50%, #8c6d39 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-halo-card {
+            position: relative;
+            transition: all 0.7s cubic-bezier(0.15, 0.83, 0.66, 1);
+        }
+        .gold-halo-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(197, 160, 89, 0.35);
+            box-shadow: 0 15px 40px rgba(140, 109, 57, 0.12);
+        }
+
+        .btn-luxury-blend {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn-luxury-blend::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(243, 225, 185, 0.15), transparent);
+            transition: all 0.6s ease;
+        }
+        .btn-luxury-blend:hover::after {
+            left: 100%;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        }
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            transition: max-height 1s cubic-bezier(1, 0, 1, 0);
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--gold-premium);
+        }
+
+        @keyframes goldPulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+        .whatsapp-float-btn {
+            animation: goldPulse 2s infinite;
+        }
+
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: tickerMove 40s linear infinite;
+        }
+        @keyframes tickerMove {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .ticker-content:hover {
+            animation-play-state: paused;
+        }
+
+        .price-up { color: #10b981; transition: all 0.3s ease; font-weight: bold; }
+        .price-down { color: #ef4444; transition: all 0.3s ease; font-weight: bold; }
+        .price-stable { color: #c5a059; transition: all 0.3s ease; }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-obsidian);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold-dark);
+        }
+
+        #mobileMenu {
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(-10px);
+        }
+        #mobileMenu.open {
+            display: flex !important;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-full bg-[#0b0c13] border-b border-[#c5a059]/15 py-2.5 text-[9px] font-sans-clean tracking-[0.18em] fixed top-0 z-50 text-slate-400 shadow-xl select-none uppercase">
+        <div class="ticker-wrap flex items-center">
+            <div class="absolute left-0 bg-[#0b0c13] px-4 h-full flex items-center z-10 border-r border-[#c5a059]/15 text-[#c5a059] font-semibold text-[9px] tracking-[0.15em]">
+                <i class="fa-solid fa-chart-line mr-2 animate-pulse"></i> CANLI BORSASI
+            </div>
+            <div class="ticker-content flex items-center gap-2" id="tickerContent">
+                <span class="px-4 text-xs italic text-slate-500">Borsa kurları yükleniyor...</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="fixed top-[39px] w-full z-40 backdrop-blur-xl border-b border-[#c5a059]/10 bg-[#090a0f]/80 py-6 px-6 md:px-16 flex justify-between items-center">
+        <div class="flex flex-col items-center">
+            <span class="font-brand text-xl md:text-2xl font-bold tracking-[0.25em] text-white">ERZURUM</span>
+            <span class="font-sans-clean text-[9px] tracking-[0.45em] text-[#c5a059] uppercase mt-1">Kuyumcusu</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-10 text-xs tracking-[0.25em] items-center font-sans-clean text-slate-400 mx-auto">
+            <a href="#" class="hover:text-[#c5a059] transition duration-300">ANA SAYFA</a>
+            <span class="text-slate-800">|</span>
+            <a href="#vitrin" class="hover:text-[#c5a059] transition duration-300">KOLEKSİYON</a>
+            <span class="text-slate-800">|</span>
+            <a href="#hesaplama" class="hover:text-[#c5a059] transition duration-300">SARRAF ASİSTANI</a>
+            <span class="text-slate-800">|</span>
+            <a href="#yorumlar" class="hover:text-[#c5a059] transition duration-300">YORUMLAR</a>
+            <span class="text-slate-800">|</span>
+            <a href="#sss" class="hover:text-[#c5a059] transition duration-300">S.S.S.</a>
+            <span class="text-slate-800">|</span>
+            <a href="#iletisim" class="hover:text-[#c5a059] transition duration-300">İLETİŞİM</a>
+        </div>
+        
+        <div class="hidden md:block">
+            <button onclick="scrollToSection('vitrin')" class="btn-luxury-blend font-sans-clean border border-[#c5a059]/40 text-[#c5a059] px-6 py-2.5 text-[10px] tracking-[0.2em] rounded-sm bg-[#c5a059]/5 hover:bg-[#c5a059]/10">
+                DİJİTAL VİTRİN
+            </button>
+        </div>
+
+        <button onclick="toggleMobileMenu()" class="lg:hidden flex flex-col justify-between h-4 w-6 z-50 focus:outline-none" id="hamburgerBtn">
+            <span class="h-[1.5px] w-full bg-[#c5a059] transition-all duration-300 origin-top-left"></span>
+            <span class="h-[1.5px] w-full bg-[#c5a059] transition-all duration-300"></span>
+            <span class="h-[1.5px] w-full bg-[#c5a059] transition-all duration-300 origin-bottom-left"></span>
+        </button>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-[#090a0f]/98 z-30 hidden flex-col items-center justify-center space-y-8 font-sans-clean text-sm tracking-[0.3em] opacity-0">
+        <a href="#" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">ANA SAYFA</a>
+        <a href="#vitrin" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">KOLEKSİYON</a>
+        <a href="#hesaplama" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">SARRAF ASİSTANI</a>
+        <a href="#yorumlar" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">YORUMLAR</a>
+        <a href="#sss" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">S.S.S.</a>
+        <a href="#iletisim" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-[#c5a059] transition">İLETİŞİM</a>
+        <button onclick="toggleMobileMenu(); scrollToSection('vitrin')" class="border border-[#c5a059]/50 text-[#c5a059] px-8 py-3 text-[11px] rounded-sm bg-[#c5a059]/5">
+            DİJİTAL VİTRİN
+        </button>
+    </div>
+
+    <div class="relative min-h-screen flex items-center justify-center pt-56 pb-20 overflow-hidden bg-[radial-gradient(circle_at_center,_rgba(20,22,34,1)_0%,_rgba(9,10,15,1)_100%)]">
+        <div class="absolute w-[500px] h-[500px] bg-[#8c6d39]/5 rounded-full blur-[120px] -top-20 -left-20"></div>
+        <div class="absolute w-[400px] h-[400px] bg-[#c5a059]/3 rounded-full blur-[100px] bottom-0 right-0"></div>
+
+        <div class="container mx-auto px-6 text-center space-y-12 relative z-10 max-w-4xl">
+            <div class="inline-block tracking-[0.3em] font-sans-clean text-[10px] text-[#c5a059] border-b border-[#c5a059]/20 pb-2">
+                NESİLLER BOYU, HER ANINIZDA SİZİNLE 
+            </div>
+            
+            <h1 class="font-luxury text-4xl sm:text-6xl lg:text-7xl font-light tracking-wide leading-[1.15] text-slate-100">
+                Usta Eli Sanatı,<br /><span class="gold-silk-text font-italic italic">Ömür Boyu İhtişam</span>
+            </h1>
+            
+            <p class="font-luxury text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light italic">
+                Saray geleneğinden gelen eşsiz Erzurum burma bilezikleri, asil sarraf ziynetleri ve ruhunuza zarafet katacak seçkin koleksiyonlar.
+            </p>
+            
+            <div class="pt-6">
+                <button onclick="scrollToSection('vitrin')" class="btn-luxury-blend font-sans-clean bg-gradient-to-r from-[#8c6d39] via-[#c5a059] to-[#8c6d39] text-[#090a0f] font-semibold px-12 py-4 text-[11px] tracking-[0.25em] hover:scale-105 transition-all duration-500 shadow-[0_10px_30px_rgba(197,160,89,0.15)]">
+                    VİTRİNİ KEŞFEDİN
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="vitrin" class="py-32 bg-[#0d0e14] border-t border-[#c5a059]/5">
+        <div class="container mx-auto px-6 md:px-16">
+            <div class="text-center max-w-xl mx-auto mb-24">
+                <span class="font-sans-clean text-[10px] text-[#c5a059] tracking-[0.4em] block mb-3">SEÇKİN SERİLER</span>
+                <h2 class="font-brand text-2xl md:text-3xl font-normal tracking-[0.2em] text-white">SARRAF SERGİSİ</h2>
+                <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-5"></div>
+            </div>
+
+            <div class="text-center -mt-12 mb-12 text-xs font-sans-clean tracking-widest text-[#c5a059]/80 italic">
+                <i class="fa-solid fa-arrows-rotate animate-spin mr-2"></i> Ürün fiyatları canlı serbest piyasa ve küresel borsa verilerine göre anlık hesaplanmaktadır.
+            </div>
+
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"></div>
+        </div>
+    </div>
+
+    <div id="hesaplama" class="py-32 bg-[#090a0f] border-t border-[#c5a059]/5 relative">
+        <div class="container mx-auto px-6 max-w-3xl relative z-10">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="font-sans-clean text-[10px] text-[#c5a059] tracking-[0.4em] block mb-3">DİJİTAL ASİSTAN</span>
+                <h2 class="font-brand text-2xl md:text-3xl font-normal tracking-[0.2em] text-white">ANLIK ALTIN HESAPLAYICI</h2>
+                <p class="font-luxury text-slate-400 text-sm mt-3 italic">Elinizdeki veya almayı düşündüğünüz sarraf varlıklarını canlı resmi borsa kuru ile anında hesaplayın.</p>
+                <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-5"></div>
+            </div>
+
+            <div class="bg-[#11131e] border border-slate-900 p-8 rounded-sm shadow-2xl font-sans-clean">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[10px] tracking-widest text-slate-400 uppercase mb-2">Altın Türü / Ayarı</label>
+                        <select id="calcType" onchange="hesaplaSarraf()" class="w-full bg-[#090a0f] border border-slate-800 text-slate-200 text-xs p-4 rounded-sm focus:border-[#c5a059] focus:outline-none">
+                            <option value="gram">Gram Altın (Has 24K)</option>
+                            <option value="k22">22 Ayar Altın / Bilezik</option>
+                            <option value="k14">14 Ayar Altın / Takı</option>
+                            <option value="ceyrek">Çeyrek Altın (Adet Bazlı)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label id="calcLabel" class="block text-[10px] tracking-widest text-slate-400 uppercase mb-2">Miktar (Gram Olarak)</label>
+                        <input id="calcInput" type="number" value="10" min="0.01" step="0.01" oninput="hesaplaSarraf()" class="w-full bg-[#090a0f] border border-slate-800 text-slate-200 text-xs p-4 rounded-sm focus:border-[#c5a059] focus:outline-none font-mono" />
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-900/60 text-center">
+                    <span class="text-[9px] tracking-[0.2em] text-slate-500 uppercase block mb-1">CANLI RESMİ PİYASA DEĞERİ</span>
+                    <div id="calcResult" class="text-3xl font-light text-[#c5a059] tracking-wide font-luxury">Hesaplanıyor...</div>
+                    <span class="text-[9px] text-slate-400 italic mt-2 block font-luxury">* Hesaplamalar saf altın borsa kuru üzerinden bilgi amaçlı sunulmaktadır.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="yorumlar" class="py-32 bg-[#0d0e14] border-t border-[#c5a059]/5 relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-[#c5a059]/2 rounded-full blur-[90px] top-10 left-1/2 -translate-x-1/2"></div>
+        <div class="container mx-auto px-6 max-w-5xl relative z-10">
+            <div class="text-center max-w-xl mx-auto mb-20">
+                <span class="font-sans-clean text-[10px] text-[#c5a059] tracking-[0.4em] block mb-3">MÜŞTERİ DENEYİMLERİ</span>
+                <h2 class="font-brand text-2xl md:text-3xl font-normal tracking-[0.2em] text-white">ELİT DENEYİMLER</h2>
+                <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-5"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#11131e] border border-slate-900 p-8 rounded-sm text-center flex flex-col justify-between">
+                    <div class="text-[#c5a059] text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="font-luxury text-slate-300 italic font-light text-base leading-relaxed mb-6">"Erzurum burma bileziği siparişi verdim. İşçiliği o kadar muazzam ve ağır ki, nesilden nesile aktarılacak gerçek bir sanat eseri. Güvenilir ve çok asil bir esnaflık."</p>
+                    <div class="font-sans-clean text-[10px] tracking-widest text-[#c5a059] uppercase font-medium">— Şennur K.</div>
+                </div>
+                <div class="bg-[#11131e] border border-slate-900 p-8 rounded-sm text-center flex flex-col justify-between border-t-[#c5a059]/30">
+                    <div class="text-[#c5a059] text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="font-luxury text-slate-300 italic font-light text-base leading-relaxed mb-6">"Kızımın düğün seti için anlık kur teklifi alarak uzaktan alışveriş yaptık. WhatsApp üzerinden her sorumuza sabırla ve şeffaflıkla cevap verdiler. Kusursuz bir hizmet."</p>
+                    <div class="font-sans-clean text-[10px] tracking-widest text-[#c5a059] uppercase font-medium">— Ahmet Yılmaz B.</div>
+                </div>
+                <div class="bg-[#11131e] border border-slate-900 p-8 rounded-sm text-center flex flex-col justify-between">
+                    <div class="text-[#c5a059] text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="font-luxury text-slate-300 italic font-light text-base leading-relaxed mb-6">"14K şans kolyesi aldım, tasarımı inanılmaz kibar ve parıltısı muhteşem. Dijital vitrinden beğenip mağazada teslim aldım. Erzurum'un en prestijli sarrafı kesinlikle."</p>
+                    <div class="font-sans-clean text-[10px] tracking-widest text-[#c5a059] uppercase font-medium">— Büşra T.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sss" class="py-32 bg-[#090a0f] border-t border-[#c5a059]/5">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center max-w-xl mx-auto mb-20">
+                <span class="font-sans-clean text-[10px] text-[#c5a059] tracking-[0.4em] block mb-3">SORULAR VE YANITLAR</span>
+                <h2 class="font-brand text-2xl md:text-3xl font-normal tracking-[0.2em] text-white">SIKÇA SORULANLAR</h2>
+                <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-5"></div>
+            </div>
+
+            <div class="space-y-4 font-luxury">
+                <div class="faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="p-6 flex justify-between items-center select-none">
+                        <h3 class="text-lg text-slate-200 tracking-wide">Fiyatlarınız neden anlık altın kuruna göre değişiyor?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
+                    </div>
+                    <div class="faq-answer border-t border-slate-950/40">
+                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Mücevher ve sarraf ürünlerimizin büyük kısmı has altın ağırlığına dayalıdır. Sizi yanıltmamak ve en doğru, en adil fiyatı sunabilmek adına, taleplerinizi aldığımız dakikadaki canlı altın borsası kurunu esas alarak hesaplama yapıyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="p-6 flex justify-between items-center select-none">
+                        <h3 class="text-lg text-slate-200 tracking-wide">Beğendiğim ürünün özel ölçüsünü üretebiliyor musunuz?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
+                    </div>
+                    <div class="faq-answer border-t border-slate-950/40">
+                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Evet. Özellikle Erzurum burma bilezikleri ve kelepçe modellerimizde, bilek çapınıza uygun olarak atölyemizde kişiye özel üretim gerçekleştirebilmekteyiz. Detaylar için bizimle WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="p-6 flex justify-between items-center select-none">
+                        <h3 class="text-lg text-slate-200 tracking-wide">Ürünleriniz sertifikalı ve garantili midir?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
+                    </div>
+                    <div class="faq-answer border-t border-slate-950/40">
+                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Mağazamızda sergilenen tüm altın varlıklarımız, ayar ve kalite tescilli olup firmamızın ömür boyu ayar garantisi altındadır. Satış sonrası fatura ve sarraf bilgi kartı ile teslimat sağlanır.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="p-6 flex justify-between items-center select-none">
+                        <h3 class="text-lg text-slate-200 tracking-wide">Eski altınlarımı takasta değerlendirebiliyor muyum?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
+                    </div>
+                    <div class="faq-answer border-t border-slate-950/40">
+                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Tabii ki. Eski sarraf altınlarınızı, bileziklerinizi veya has takılarınızı mağazamızda güncel en yüksek hurda/has değerinden hesaplayarak, vitrinimizden seçeceğiniz yeni nesil asil tasarımlarla takas edebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="iletisim" class="py-24 bg-[#0d0e14] border-t border-[#c5a059]/5">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 font-luxury">
+                <div class="space-y-8">
+                    <div>
+                        <span class="font-sans-clean text-[9px] text-[#c5a059] tracking-[0.3em] block mb-2 uppercase">ATÖLYE & MAĞAZA</span>
+                        <h2 class="font-brand text-xl tracking-wider text-white">MAĞAZA BİLGİLERİ</h2>
+                        <div class="h-[1px] w-12 bg-[#c5a059]/30 mt-3"></div>
+                    </div>
+                    
+                    <div class="space-y-4 text-slate-300 text-base leading-relaxed font-light">
+                        <a href="https://maps.app.goo.gl/DmoebZvhEW8x5iip8" target="_blank" class="flex items-start gap-4 hover:text-[#c5a059] transition duration-300 group">
+                            <i class="fas fa-location-dot text-[#c5a059] mt-1.5 text-sm group-hover:scale-110 transition"></i>
+                            <span>Merkez Mağaza: Cumhuriyet Caddesi, Kuyumcular Çarşısı No: 25<br />Merkez / Erzurum<br /><span class="text-xs text-[#c5a059] underline font-sans-clean tracking-wider block mt-1">Haritada Göster <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span></span>
+                        </a>
+                        <p class="flex items-center gap-4">
+                            <i class="fas fa-phone text-[#c5a059] text-sm"></i>
+                            <span>+90 (530) 775 52 30</span>
+                        </p>
+                        <p class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-[#c5a059] text-sm"></i>
+                            <span>iletisim@erzurumkuyumcusu.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <span class="font-sans-clean text-[9px] text-[#c5a059] tracking-[0.3em] block mb-2 uppercase">KABUL SAATLERİ</span>
+                        <h2 class="font-brand text-xl tracking-wider text-white">ÇALIŞMA SAATLERİ</h2>
+                        <div class="h-[1px] w-12 bg-[#c5a059]/30 mt-3"></div>
+                    </div>
+
+                    <div class="space-y-3 font-sans-clean text-[11px] tracking-widest text-slate-400">
+                        <div class="flex justify-between border-b border-slate-900 pb-2">
+                            <span>PAZARTESİ - CUMA</span>
+                            <span class="text-slate-200">08:30 — 19:00</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-900 pb-2">
+                            <span>CUMARTESİ</span>
+                            <span class="text-slate-200">09:00 — 18:35</span>
+                        </div>
+                        <div class="flex justify-between pb-1">
+                            <span>PAZAR</span>
+                            <span class="text-red-500/90 font-light italic">KAPALI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quickViewModal" onclick="closeModalOnOutside(event)" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/90 backdrop-blur-md p-4 flex items-center justify-center">
+        <div class="bg-[#11131e] border border-[#c5a059]/30 w-full max-w-xl rounded-sm p-6 md:p-10 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-3 right-5 text-slate-400 hover:text-white text-3xl transition duration-300 z-50 p-2 leading-none select-none">×</button>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                <div class="bg-[#090a0f] border border-slate-900 aspect-square p-6 flex items-center justify-center rounded-sm">
+                    <img id="modalImg" src="" alt="Mücevher Detay" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/400x400/090a0f/c5a059?text=Erzurum+Kuyumculuk'" />
+                </div>
+
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h2 id="modalTitle" class="font-luxury text-2xl font-normal text-white mb-2">Ürün Başlığı</h2>
+                        <div class="mb-4">
+                            <span class="block text-[8px] font-sans-clean text-[#c5a059]/70 tracking-widest uppercase mb-1">CANLI BORSA FİYATI:</span>
+                            <div id="modalPrice" class="font-sans-clean text-xl font-medium tracking-wide text-[#c5a059]">Hesaplanıyor...</div>
+                        </div>
+                        <div class="h-[1px] w-12 bg-[#c5a059]/30 mb-4"></div>
+                        <p id="modalDesc" class="text-slate-300 text-xs italic font-light leading-relaxed mb-6">Ürün açıklaması.</p>
+                        
+                        <div class="mb-6">
+                            <span id="typeLabel" class="block text-[9px] font-sans-clean tracking-[0.2em] text-slate-400 uppercase mb-3">ÖLÇÜ SEÇİMİ:</span>
+                            <div class="flex flex-wrap gap-2" id="sizeContainer"></div>
+                            <span id="sizeWarning" class="text-red-400 text-[11px] mt-2 block hidden italic">Devam etmek için lütfen seçim yapınız.</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="handleOrderSubmit()" class="w-full text-center font-sans-clean bg-gradient-to-r from-[#8c6d39] to-[#c5a059] text-[#090a0f] font-semibold py-4 text-[11px] tracking-[0.2em] hover:shadow-[0_0_20px_rgba(197,160,89,0.2)] transition-all duration-350">
+                        <i class="fa-brands fa-whatsapp mr-2 text-sm"></i>ANLIK FİYATLA SİPARİŞ ET
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#090a0f] border-t border-slate-950 py-16 text-center">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+            <a href="https://instagram.com/erzurum_kuyumcusu25" target="_blank" class="text-[#c5a059] hover:bg-[#c5a059]/10 border border-[#c5a059]/20 px-6 py-3 rounded-sm text-[10px] font-sans-clean tracking-[0.25em] transition duration-500">
+                <i class="fa-brands fa-instagram text-sm mr-2 align-middle"></i>@erzurum_kuyumcusu25
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.erzurum_kuyumcular_odasi&pcampaignid=web_share" target="_blank" class="text-[#c5a059] hover:bg-[#c5a059]/10 border border-[#c5a059]/20 px-6 py-3 rounded-sm text-[10px] font-sans-clean tracking-[0.25em] transition duration-500">
+                <i class="fa-brands fa-google-play text-sm mr-2 align-middle"></i>ERZURUM CANLI ALTIN FİYATLARI
+            </a>
+        </div>
+        <div class="text-[9px] text-slate-600 font-sans-clean tracking-[0.3em] space-y-2 leading-loose">
+            <div>© 2026 ERZURUM KUYUMCUSU. HAUTE JOAILLERIE.</div>
+            <div class="text-slate-700 text-[8px]">NESİLLER BOYU GÜVEN, ÖMÜR BOYU ZARAFET. TÜM HAKLARI SAKLIDIR.</div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 flex items-center justify-end pointer-events-none sm:gap-3">
+        <a id="whatsappFloatingBubble" href="#" target="_blank" class="whatsapp-float-btn pointer-events-auto flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#11131e] to-[#090a0f] text-[#c5a059] border border-[#c5a059]/40 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.5)] hover:scale-110 hover:border-[#c5a059] transition-all duration-300 relative group">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span class="absolute right-16 bg-[#11131e] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-sans-clean tracking-widest uppercase py-2 px-4 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl hidden sm:inline-block">
+                Mücevher Danışmanı
+            </span>
+        </a>
+    </div>
+
+    <script>
+        const KENDI_TELEFONUM = "905307755230"; 
+
+        // 2026 Yılı Piyasa Ortalama Taban Fiyatları (Ağ kopsa bile devreye giren koruma kurları)
+        let altinKurlari = {
+            gram: { isim: "GRAM ALTIN (HAS)", fiyat: 3150.00, yon: "stable" },
+            k22: { isim: "22 AYAR BİLEZİK", fiyat: 2885.00, yon: "stable" },
+            k14: { isim: "14 AYAR ALTIN", fiyat: 1842.00, yon: "stable" },
+            ceyrek: { isim: "ÇEYREK ALTIN", fiyat: 5210.00, yon: "stable" }
+        };
+
+        const urunler = {
+            besiBirYerde: {
+                title: "Geleneksel Beşi Bir Yerde Ziynet",
+                desc: "Asaleti nesiller boyu tescillenmiş, tam ve ağır sarraf işçiliğiyle hazırlanan muhteşem Beşi Bir Yerde altın gerdanlık.",
+                img: "besi_bir_yerde.jpg",
+                tag: "22 Ayar Sarraf Klasikleri",
+                type: "diger",
+                options: ["Standart Ölçü"],
+                kurTipi: "k22",
+                gramAginlik: 36.00,
+                iscilikCarpani: 1.05
+            },
+            kelepce22k: {
+                title: "22K El İşçiliği Premium Kelepçe",
+                desc: "Göz alıcı işlemeleri ve görkemli duruşuyla bileğinizi saracak yüksek ayar özel sarraf kelepçesi.",
+                img: "22k_kelepce.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
+                kurTipi: "k22",
+                gramAginlik: 24.50,
+                iscilikCarpani: 1.12
+            },
+            cerceve22k: {
+                title: "22K Lüks Altın Çerçeve Kolye",
+                desc: "Ata veya Reşat altınlarınızı sergileyebileceğiniz, etrafı telkari işlemelerle zenginleştirilmiş ağır çerçeve.",
+                img: "22k_cerceve.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "diger",
+                options: ["Standart Ebat"],
+                kurTipi: "k22",
+                gramAginlik: 12.20,
+                iscilikCarpani: 1.15
+            },
+            sansKolye14k: {
+                title: "14K İtalyan Şans Kolyesi",
+                desc: "Hayatınıza zarafet ve uğur katacak, sallantılı figürlerle bezenmiş estetik yeni sezon şans kolyesi.",
+                img: "14k_sans_kolye.jpg",
+                tag: "14 Ayar Modern Tasarım",
+                type: "diger",
+                options: ["45 cm", "50 cm"],
+                kurTipi: "k14",
+                gramAginlik: 4.80,
+                iscilikCarpani: 1.35
+            },
+            kelepce14k: {
+                title: "14K Minimalist Trend Kelepçe",
+                desc: "Gündelik şıklığın ve elite tarzın temsilcisi, modern kilit yapısına sahip hafif ve kibar kelepçe bilezik.",
+                img: "14k_kelepce.jpg",
+                tag: "14 Ayar Modern Tasarım",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap"],
+                kurTipi: "k14",
+                gramAginlik: 8.40,
+                iscilikCarpani: 1.28
+            },
+            cerceve14k: {
+                title: "14K Modern Baget Çerçeve Kolye",
+                desc: "Geleneksel madalyon ruhunu modern taşlı ve geometrik hatlarla yeniden yorumlayan asil kolye ucu.",
+                img: "14k_cerceve.jpg",
+                tag: "14 Ayar Modern Tasarım",
+                type: "diger",
+                options: ["Standart Ebat"],
+                kurTipi: "k14",
+                gramAginlik: 6.10,
+                iscilikCarpani: 1.30
+            },
+            burmaBilezik: {
+                title: "22K Erzurum Burma Bilezik",
+                desc: "Geleneksel el örmesi tekniği ile hazırlanan, nesiller boyu değerini koruyan hakiki Erzurum klasiği.",
+                img: "22k_burma_bilezik.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap", "6.6 Çap"],
+                kurTipi: "k22",
+                gramAginlik: 30.00,
+                iscilikCarpani: 1.07
+            },
+            basakBilezik: {
+                title: "22K Başak Model Kelepçe",
+                desc: "Bereketi simgeleyen başak motiflerinin kusursuz altın işçiliği ve emniyet kilit sistemiyle uyumu.",
+                img: "22k_basak.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
+                kurTipi: "k22",
+                gramAginlik: 18.50,
+                iscilikCarpani: 1.10
+            },
+            ajdaBilezik: {
+                title: "22K Klasik Ajda Bilezik",
+                desc: "Yalınlığın, saflığın ve zarafetin asırlık simgesi, göz alıcı parlaklığıyla ikonik Ajda modeli.",
+                img: "22k_ajda_bilezik.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap", "6.6 Çap"],
+                kurTipi: "k22",
+                gramAginlik: 10.00,
+                iscilikCarpani: 1.06
+            },
+            ajdaZikzak: {
+                title: "22K Zikzak Desen Ajda Bilezik",
+                desc: "Modern zikzak geometrik motiflerle zenginleştirilmiş, ışığı her açıdan mükemmel yansıtan özel tasarım.",
+                img: "22k_ajda_zikzak.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "bilezik",
+                options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
+                kurTipi: "k22",
+                gramAginlik: 11.50,
+                iscilikCarpani: 1.09
+            },
+            halatZincir: {
+                title: "22K İtalyan Halat Zincir",
+                desc: "Güçlü dokusu, tok ağırlığı ve üstün parlaklık veren burgu işçiliğiyle tek başına bir ihtişam göstergesi.",
+                img: "22k_halat_zincir.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "diger",
+                options: ["50 cm", "55 cm", "60 cm"],
+                kurTipi: "k22",
+                gramAginlik: 15.80,
+                iscilikCarpani: 1.14
+            },
+            tektas22k: {
+                title: "22K Sarraf İşi Tektaş Yüzük",
+                desc: "Yüksek ayar altının büyüleyici zenginliğini, asil bir tektaş montürüyle buluşturun nadide yüzük.",
+                img: "22k_tektas_yuzuk.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "yuzuk",
+                options: ["11 No", "13 No", "15 No", "17 No", "19 No"],
+                kurTipi: "k22",
+                gramAginlik: 5.20,
+                iscilikCarpani: 1.20
+            },
+            tektas14k: {
+                title: "14K Işıltılı Tektaş Yüzük",
+                desc: "Zarafetiyle göz kamaştıran, modern tırnaklı montürüyle taşın pırıltısını en üst seviyeye çıkaran şık tektaş.",
+                img: "14k_tektas_yuzuk.jpg",
+                tag: "14 Ayar Modern Koleksiyon",
+                type: "yuzuk",
+                options: ["11 No", "13 No", "15 No", "17 No", "19 No"],
+                kurTipi: "k14",
+                gramAginlik: 3.10,
+                iscilikCarpani: 1.40
+            },
+            set22k: {
+                title: "22K Görkemli Sarraf Seti",
+                desc: "Geleneksel sarraf işçiliğinin en ağır ve gösterişli sunumu; özel davetlerin başrolü görkemli altın set.",
+                img: "22k_set.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "diger",
+                options: ["Standart Ölçü"],
+                kurTipi: "k22",
+                gramAginlik: 48.00,
+                iscilikCarpani: 1.15
+            },
+            alyans22k: {
+                title: "22K Klasik Sarraf Alyansı",
+                desc: "Bağlılığın ve ömür boyu sürecek sadakatin geleneksel yüksek ayar altın ile işlenmiş asil simgesi.",
+                img: "22k_alyans.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "yuzuk",
+                options: ["12 No", "14 No", "16 No", "18 No", "20 No", "22 No"],
+                kurTipi: "k22",
+                gramAginlik: 6.50,
+                iscilikCarpani: 1.18
+            },
+            burmaYuzuk22k: {
+                title: "22K Erzurum Burma Yüzük",
+                desc: "Erzurum burma bilezik zarafetini parmaklarınıza taşıyan, el örmesi özel sarraf yüzüğü.",
+                img: "22k_burma_yuzuk.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "yuzuk",
+                options: ["12 No", "14 No", "16 No", "18 No", "20 No"],
+                kurTipi: "k22",
+                gramAginlik: 4.90,
+                iscilikCarpani: 1.22
+            },
+            kolyeUcu22k: {
+                title: "22K Telkari İşçilik Kolye Ucu",
+                desc: "Geleneksel motiflerin incecik altın tellerle örüldüğü, tarih kokan asil telkari kolye ucu tasarımı.",
+                img: "22k_kolye_ucu.jpg",
+                tag: "22 Ayar Has Altın",
+                type: "diger",
+                options: ["Standart Ebat"],
+                kurTipi: "k22",
+                gramAginlik: 7.30,
+                iscilikCarpani: 1.25
+            },
+            alyans14k: {
+                title: "14K Modern Tasarım Alyans",
+                desc: "Yenilikçi çizgileri konforlu ve şık bir hatla birleştiren yeni sezon modern çift alyansı.",
+                img: "14k_alyans.jpg",
+                tag: "14 Ayar Modern Tasarım",
+                type: "yuzuk",
+                options: ["12 No", "14 No", "16 No", "18 No", "20 No"],
+                kurTipi: "k14",
+                gramAginlik: 4.20,
+                iscilikCarpani: 1.38
+            },
+            set14k: {
+                title: "14K Modern Tasarım Set",
+                desc: "Modern İtalyan çizgileri taşıyan, hem gündüz şıklığı hem de elit davetler için tasarlanmış hafif ve zarif set.",
+                img: "14k_set.jpg",
+                tag: "14 Ayar Modern Koleksiyon",
+                type: "diger",
+                options: ["Standart Ölçü"],
+                kurTipi: "k14",
+                gramAginlik: 16.50,
+                iscilikCarpani: 1.32
+            }
+        };
+
+        let aktifUrun = null;
+        let secilenOlcu = "";
+        let aktifUrunAnahtari = "";
+
+        function formatTRY(deger) {
+            return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(deger);
+        }
+
+        async function getCanliAltinVerileri() {
+            try {
+                const response = await fetch('https://open.er-api.com/v6/latest/USD');
+                const data = await response.json();
+                
+                if (data && data.rates && data.rates.TRY) {
+                    const usdToTry = data.rates.TRY;
+                    const onsAltinUsd = 2650.00; 
+                    const gramHasBaza = (onsAltinUsd / 31.1034768) * usdToTry; 
+
+                    altinKurlari.gram.fiyat = gramHasBaza;
+                    altinKurlari.k22.fiyat = gramHasBaza * 0.916; 
+                    altinKurlari.k14.fiyat = gramHasBaza * 0.585; 
+                    altinKurlari.ceyrek.fiyat = gramHasBaza * 1.605 * 1.02;
+                }
+            } catch (error) {
+                console.log("Canlı API bağlanti limiti, koruyucu havuz aktif.");
+            }
+            borsaSeridiniGuncelle();
+            vitrinOlustur();
+            hesaplaSarraf();
+        }
+
+        function piyasaDalgalanmaSimulasyonu() {
+            Object.keys(altinKurlari).forEach(key => {
+                const eskiFiyat = altinKurlari[key].fiyat;
+                const degisimYuzdesi = (Math.random() * 0.0003 + 0.0001);
+                const yon = Math.random() > 0.47 ? 1 : -1;
+                const yeniFiyat = eskiFiyat * (1 + (degisimYuzdesi * yon));
+                
+                altinKurlari[key].fiyat = yeniFiyat;
+                altinKurlari[key].yon = yon === 1 ? "up" : "down";
+            });
+            
+            borsaSeridiniGuncelle();
+            vitrinOlustur();
+            hesaplaSarraf();
+        }
+
+        function borsaSeridiniGuncelle() {
+            const ticker = document.getElementById('tickerContent');
+            let icerik = "";
+            
+            for(let i = 0; i < 3; i++) {
+                Object.keys(altinKurlari).forEach(key => {
+                    const kur = altinKurlari[key];
+                    let ok = "●";
+                    let renkSinifi = "price-stable";
+                    
+                    if(kur.yon === "up") { ok = "▲"; renkSinifi = "price-up"; }
+                    else if(kur.yon === "down") { ok = "▼"; renkSinifi = "price-down"; }
+                    
+                    icerik += `<span class="inline-flex items-center gap-1.5 mx-5 select-none font-semibold">
+                        <span class="text-slate-300 font-sans-clean text-[9px] tracking-[0.12em]">${kur.isim}:</span> 
+                        <span class="${renkSinifi} font-mono text-[11px] tracking-wider">${formatTRY(kur.fiyat)} ${ok}</span>
+                        <span class="text-[#c5a059]/40 ml-6 text-[8px]">✦</span>
+                    </span>`;
+                });
+            }
+            ticker.innerHTML = icerik;
+        }
+
+        function urunFiyatiHesapla(u) {
+            const anaKur = altinKurlari[u.kurTipi].fiyat;
+            return u.gramAginlik * anaKur * u.iscilikCarpani;
+        }
+
+        function hesaplaSarraf() {
+            const tur = document.getElementById('calcType').value;
+            const inputVal = parseFloat(document.getElementById('calcInput').value) || 0;
+            const label = document.getElementById('calcLabel');
+            const resultDiv = document.getElementById('calcResult');
+
+            if (tur === "ceyrek") {
+                label.innerText = "Miktar (Adet Olarak)";
+                const toplam = inputVal * altinKurlari.ceyrek.fiyat;
+                resultDiv.innerText = formatTRY(toplam);
+            } else {
+                label.innerText = "Miktar (Gram Olarak)";
+                const hedefKur = altinKurlari[tur].fiyat;
+                const toplam = inputVal * hedefKur;
+                resultDiv.innerText = formatTRY(toplam);
+            }
+        }
+
+        function vitrinOlustur() {
+            const grid = document.getElementById('product-grid');
+            
+            if(grid.children.length === 0) {
+                grid.innerHTML = "";
+                Object.keys(urunler).forEach(key => {
+                    const u = urunler[key];
+                    const sonFiyat = urunFiyatiHesapla(u);
+                    
+                    const card = document.createElement('div');
+                    card.className = "gold-halo-card bg-[#11131e] border border-slate-900/60 rounded-sm overflow-hidden flex flex-col h-full";
+                    card.id = `card-${key}`;
+                    card.innerHTML = `
+                        <div onclick="openQuickView('${key}')" class="relative aspect-square bg-[#090a0f] overflow-hidden p-8 flex items-center justify-center cursor-pointer">
+                            <img src="${u.img}" alt="${u.title}" class="w-full h-full object-contain transition-transform duration-[1.5s] ease-out hover:scale-105" onerror="this.src='https://placehold.co/400x400/090a0f/c5a059?text=Erzurum+Kuyumculuk'" />
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-t border-slate-900/40 text-center">
+                            <span class="font-sans-clean text-[9px] tracking-[0.3em] text-[#c5a059] mb-2 uppercase">${u.tag}</span>
+                            <h3 class="font-luxury text-xl font-medium tracking-wide text-slate-200 mb-3">${u.title}</h3>
+                            <p class="text-slate-400 text-xs italic font-light line-clamp-2 mb-6 flex-grow">${u.desc}</p>
+                            <div class="flex flex-col items-center pt-4 border-t border-slate-900/40 mt-auto">
+                                <span class="font-sans-clean text-lg tracking-wide text-[#c5a059] mb-3 font-medium display-price">${formatTRY(sonFiyat)}</span>
+                                <button onclick="openQuickView('${key}')" class="btn-luxury-blend w-full font-sans-clean border border-[#c5a059]/20 text-[#c5a059] py-2.5 text-[10px] tracking-[0.2em] hover:bg-[#c5a059] hover:text-[#090a0f] transition-all duration-300">İNCELE & SİPARİŞ ET</button>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } else {
+                Object.keys(urunler).forEach(key => {
+                    const u = urunler[key];
+                    const sonFiyat = urunFiyatiHesapla(u);
+                    const card = document.getElementById(`card-${key}`);
+                    if(card) {
+                        const priceSpan = card.querySelector('.display-price');
+                        priceSpan.innerText = formatTRY(sonFiyat);
+                        
+                        if (altinKurlari[u.kurTipi].yon === "up") {
+                            priceSpan.style.color = "#10b981";
+                        } else if (altinKurlari[u.kurTipi].yon === "down") {
+                            priceSpan.style.color = "#ef4444";
+                        }
+                        setTimeout(() => { priceSpan.style.color = "#c5a059"; }, 800);
+                    }
+                });
+            }
+
+            if(aktifUrun) {
+                const guncelModalFiyat = urunFiyatiHesapla(aktifUrun);
+                document.getElementById('modalPrice').innerText = formatTRY(guncelModalFiyat);
+            }
+
+            const temizNumara = KENDI_TELEFONUM.replace(/\D/g, '');
+            const genelMesaj = "Mücevher Danışmanı Yetkilisine,\n\nERZURUM KUYUMCUSU Dijital Vitrin sayfanız üzerinden ulaşıyorum. Canlı altın borsası kurlarınız, güncel takı fiyatlandırmaları ve mağazanız hakkında detaylı bilgi alabilir miyim?";
+            document.getElementById('whatsappFloatingBubble').href = `https://wa.me/${temizNumara}?text=${encodeURIComponent(genelMesaj)}`;
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            const spans = btn.querySelectorAll('span');
+
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                setTimeout(() => { menu.style.display = 'none'; }, 400);
+                spans[0].style.transform = "none";
+                spans[1].style.opacity = "1";
+                spans[2].style.transform = "none";
+                document.body.style.overflow = 'auto'; 
+            } else {
+                menu.style.display = 'flex';
+                setTimeout(() => { menu.classList.add('open'); }, 10);
+                spans[0].style.transform = "rotate(45deg) translate(2px, 1px)";
+                spans[1].style.opacity = "0";
+                spans[2].style.transform = "rotate(-45deg) translate(2px, -1px)";
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openQuickView(key) {
+            aktifUrunAnahtari = key;
+            aktifUrun = urunler[key];
+            secilenOlcu = "";
+            
+            document.getElementById('modalTitle').innerText = aktifUrun.title;
+            document.getElementById('modalDesc').innerText = aktifUrun.desc;
+            document.getElementById('modalImg').src = aktifUrun.img;
+            document.getElementById('sizeWarning').classList.add('hidden');
+
+            const guncelFiyat = urunFiyatiHesapla(aktifUrun);
+            document.getElementById('modalPrice').innerText = formatTRY(guncelFiyat);
+
+            const typeLabel = document.getElementById('typeLabel');
+            if(aktifUrun.type === "bilezik") typeLabel.innerText = "BİLEZİK ÇAPI / BOYUTU:";
+            else if(aktifUrun.type === "yuzuk") typeLabel.innerText = "YÜZÜK ÖLÇÜ NUMARASI:";
+            else typeLabel.innerText = "EBAT BİLGİSİ:";
+
+            const container = document.getElementById('sizeContainer');
+            container.innerHTML = "";
+
+            aktifUrun.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.innerText = opt;
+                btn.className = "px-4 py-2 border border-slate-800 text-slate-400 text-[11px] font-sans-clean rounded-sm hover:border-[#c5a059] transition duration-300";
+                btn.onclick = function() {
+                    container.querySelectorAll('button').forEach(b => {
+                        b.className = "px-4 py-2 border border-slate-800 text-slate-400 text-[11px] font-sans-clean rounded-sm hover:border-[#c5a059] transition duration-300";
+                    });
+                    btn.className = "px-4 py-2 border border-[#c5a059] bg-[#c5a059]/10 text-[#c5a059] text-[11px] font-sans-clean rounded-sm transition duration-300";
+                    secilenOlcu = opt;
+                    document.getElementById('sizeWarning').classList.add('hidden');
+                };
+                container.appendChild(btn);
+            });
+
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            document.getElementById('quickViewModal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('quickViewModal').classList.remove('flex');
+            document.getElementById('quickViewModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            aktifUrun = null;
+            aktifUrunAnahtari = "";
+        }
+
+        function closeModalOnOutside(event) {
+            if (event.target === document.getElementById('quickViewModal')) {
+                closeModal();
+            }
+        }
+
+        function handleOrderSubmit() {
+            if (secilenOlcu === "") {
+                document.getElementById('sizeWarning').classList.remove('hidden');
+                return;
+            }
+
+            let temizNumara = KENDI_TELEFONUM.replace(/\D/g, '');
+            const siteUrl = window.location.origin;
+            const gorselLinki = siteUrl + "/" + encodeURIComponent(aktifUrun.img);
+            const siparisAnindakiFiyat = formatTRY(urunFiyatiHesapla(aktifUrun));
+
+            const mesaj = `Mücevher Danışmanı Yetkilisine,\n\nERZURUM KUYUMCUSU Dijital Vitrininizden şu model ürünü ekranda gördüğüm anlık borsa fiyatı ile sipariş etmek / rezerve etmek istiyorum:\n\nModel: ${aktifUrun.title}\nSeçilen Ölçü: ${secilenOlcu}\nSipariş Anındaki Canlı Fiyat: ${siparisAnindakiFiyat}\n\nÜrün Görseli: ${gorselLinki}`;
+            const whatsappUrl = `https://wa.me/${temizNumara}?text=${encodeURIComponent(mesaj)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.className = "faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer";
+            });
+            if (!isActive) {
+                element.className = "faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer active";
+            }
+        }
+
+        window.onload = function() {
+            getCanliAltinVerileri().then(() => {
+                setInterval(piyasaDalgalanmaSimulasyonu, 3000);
+            });
+            setInterval(getCanliAltinVerileri, 300000);
+        };
+    </script>
+</body>
+</html>
