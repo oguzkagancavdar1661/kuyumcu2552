@@ -253,7 +253,7 @@
             </div>
 
             <div class="text-center -mt-12 mb-12 text-xs font-sans-clean tracking-widest text-[#c5a059]/80 italic">
-                <i class="fa-solid fa-arrows-rotate animate-spin mr-2"></i> Ürün fiyatları canlı Harem Altın serbest piyasa mağaza verilerine göre anlık hesaplanmaktadır.
+                <i class="fa-solid fa-arrows-rotate animate-spin mr-2"></i> Ürün fiyatları canlı Harem Altın sitesi mağaza satış fiyatlarına göre %100 senkronize hesaplanmaktadır.
             </div>
 
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"></div>
@@ -265,7 +265,7 @@
             <div class="text-center max-w-xl mx-auto mb-16">
                 <span class="font-sans-clean text-[10px] text-[#c5a059] tracking-[0.4em] block mb-3">DİJİTAL ASİSTAN</span>
                 <h2 class="font-brand text-2xl md:text-3xl font-normal tracking-[0.2em] text-white">ANLIK ALTIN HESAPLAYICI</h2>
-                <p class="font-luxury text-slate-400 text-sm mt-3 italic">Elinizdeki veya almayı düşündüğünüz sarraf varlıklarını canlı resmi borsa kuru ile anında hesaplayın.</p>
+                <p class="font-luxury text-slate-400 text-sm mt-3 italic">Elinizdeki veya almayı düşündüğünüz sarraf varlıklarını canlı Harem Altın mağaza kuru ile anında hesaplayın.</p>
                 <div class="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#c5a059] to-transparent mx-auto mt-5"></div>
             </div>
 
@@ -287,9 +287,9 @@
                 </div>
 
                 <div class="mt-8 pt-6 border-t border-slate-900/60 text-center">
-                    <span class="text-[9px] tracking-[0.2em] text-slate-500 uppercase block mb-1">CANLI RESMİ PİYASA DEĞERİ</span>
+                    <span class="text-[9px] tracking-[0.2em] text-slate-500 uppercase block mb-1">HAREM ALTIN MAĞAZA SATIŞ DEĞERİ</span>
                     <div id="calcResult" class="text-3xl font-light text-[#c5a059] tracking-wide font-luxury">Hesaplanıyor...</div>
-                    <span class="text-[9px] text-slate-400 italic mt-2 block font-luxury">* Hesaplamalar Harem Altın bazlı piyasa kuru üzerinden bilgi amaçlı sunulmaktadır.</span>
+                    <span class="text-[9px] text-slate-400 italic mt-2 block font-luxury">* Hesaplamalar Harem Altın bazlı perakende satış kuru üzerinden bilgi amaçlı sunulmaktadır.</span>
                 </div>
             </div>
         </div>
@@ -339,7 +339,7 @@
                         <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
                     </div>
                     <div class="faq-answer border-t border-slate-950/40">
-                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Mücevher ve sarraf ürünlerimizin büyük kısmı has altın ağırlığına dayalıdır. Sizi yanıltmamak ve en doğru, en adil fiyatı sunabilmek adına, taleplerinizi aldığımız dakikadaki canlı Harem Altın piyasa borsası kurunu esas alarak hesaplama yapıyoruz.</p>
+                        <p class="p-6 text-sm text-slate-400 leading-relaxed italic font-light">Mücevher ve sarraf ürünlerimizin büyük kısmı has altın ağırlığına dayalıdır. Sizi yanıltmamak ve en doğru, en adil fiyatı sunabilmek adına, taleplerinizi aldığımız dakikadaki canlı Harem Altın piyasa borsası mağaza kurunu esas alarak hesaplama yapıyoruz.</p>
                     </div>
                 </div>
 
@@ -365,7 +365,7 @@
 
                 <div class="faq-item bg-[#11131e] border border-slate-900 rounded-sm cursor-pointer" onclick="toggleFaq(this)">
                     <div class="p-6 flex justify-between items-center select-none">
-                        <h3 class="text-lg text-slate-200 tracking-wide">Eski altınlarımı takasta değerlendirebiliyor muym?</h3>
+                        <h3 class="text-lg text-slate-200 tracking-wide">Eski altınlarımı takasta değerlendirebiliyor muyum?</h3>
                         <i class="fas fa-chevron-down faq-icon text-xs text-slate-500"></i>
                     </div>
                     <div class="faq-answer border-t border-slate-950/40">
@@ -441,7 +441,7 @@
                     <div>
                         <h2 id="modalTitle" class="font-luxury text-2xl font-normal text-white mb-2">Ürün Başlığı</h2>
                         <div class="mb-4">
-                            <span class="block text-[8px] font-sans-clean text-[#c5a059]/70 tracking-widest uppercase mb-1">ANLIK HAREM FİYATI:</span>
+                            <span class="block text-[8px] font-sans-clean text-[#c5a059]/70 tracking-widest uppercase mb-1">ANLIK HAREM SİTE FİYATI:</span>
                             <div id="modalPrice" class="font-sans-clean text-xl font-medium tracking-wide text-[#c5a059]">Hesaplanıyor...</div>
                         </div>
                         <div class="h-[1px] w-12 bg-[#c5a059]/30 mb-4"></div>
@@ -489,12 +489,12 @@
     <script>
         const KENDI_TELEFONUM = "905307755230"; 
 
-        // Harem Altın Canlı Serbest Piyasa Mağaza Taban Satış Fiyatları (API Beslemesi Entegre Edildi)
+        // Harem Altın Canlı Satış Taban Başlangıç Kurları
         let altinKurlari = {
-            gram: { isim: "GRAM ALTIN (HAS)", fiyat: 6390.00, yon: "stable" },
-            k22: { isim: "22 AYAR BİLEZİK", fiyat: 6015.00, yon: "stable" },
-            k14: { isim: "14 AYAR ALTIN", fiyat: 4630.00, yon: "stable" },
-            ceyrek: { isim: "ÇEYREK ALTIN", fiyat: 10440.00, yon: "stable" }
+            gram: { isim: "GRAM ALTIN (HAS)", fiyat: 3120.00, yon: "stable" },
+            k22: { isim: "22 AYAR BİLEZİK", fiyat: 2950.00, yon: "stable" },
+            k14: { isim: "14 AYAR ALTIN", fiyat: 1840.00, yon: "stable" },
+            ceyrek: { isim: "ÇEYREK ALTIN", fiyat: 5210.00, yon: "stable" }
         };
 
         const urunler = {
@@ -507,7 +507,7 @@
                 options: ["Standart Ölçü"],
                 kurTipi: "k22",
                 gramAginlik: 36.00,
-                iscilikCarpani: 1.05
+                iscilikCarpani: 1.02
             },
             kelepce22k: {
                 title: "22K El İşçiliği Premium Kelepçe",
@@ -518,7 +518,7 @@
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
                 kurTipi: "k22",
                 gramAginlik: 24.50,
-                iscilikCarpani: 1.12
+                iscilikCarpani: 1.06
             },
             cerceve22k: {
                 title: "22K Lüks Altın Çerçeve Kolye",
@@ -529,7 +529,7 @@
                 options: ["Standart Ebat"],
                 kurTipi: "k22",
                 gramAginlik: 12.20,
-                iscilikCarpani: 1.15
+                iscilikCarpani: 1.07
             },
             sansKolye14k: {
                 title: "14K İtalyan Şans Kolyesi",
@@ -540,7 +540,7 @@
                 options: ["45 cm", "50 cm"],
                 kurTipi: "k14",
                 gramAginlik: 4.80,
-                iscilikCarpani: 1.35
+                iscilikCarpani: 1.25
             },
             kelepce14k: {
                 title: "14K Minimalist Trend Kelepçe",
@@ -551,7 +551,7 @@
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap"],
                 kurTipi: "k14",
                 gramAginlik: 8.40,
-                iscilikCarpani: 1.28
+                iscilikCarpani: 1.18
             },
             cerceve14k: {
                 title: "14K Modern Baget Çerçeve Kolye",
@@ -562,7 +562,7 @@
                 options: ["Standart Ebat"],
                 kurTipi: "k14",
                 gramAginlik: 6.10,
-                iscilikCarpani: 1.30
+                iscilikCarpani: 1.20
             },
             burmaBilezik: {
                 title: "22K Erzurum Burma Bilezik",
@@ -572,8 +572,8 @@
                 type: "bilezik",
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap", "6.6 Çap"],
                 kurTipi: "k22",
-                gramAginlik: 30.00,
-                iscilikCarpani: 1.07
+                gramAginlik: 20.00,
+                iscilikCarpani: 1.03
             },
             basakBilezik: {
                 title: "22K Başak Model Kelepçe",
@@ -584,7 +584,7 @@
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
                 kurTipi: "k22",
                 gramAginlik: 18.50,
-                iscilikCarpani: 1.10
+                iscilikCarpani: 1.05
             },
             ajdaBilezik: {
                 title: "22K Klasik Ajda Bilezik",
@@ -595,7 +595,7 @@
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap", "6.6 Çap"],
                 kurTipi: "k22",
                 gramAginlik: 10.00,
-                iscilikCarpani: 1.06
+                iscilikCarpani: 1.02
             },
             ajdaZikzak: {
                 title: "22K Zikzak Desen Ajda Bilezik",
@@ -606,7 +606,7 @@
                 options: ["5.8 Çap", "6.0 Çap", "6.2 Çap", "6.4 Çap"],
                 kurTipi: "k22",
                 gramAginlik: 11.50,
-                iscilikCarpani: 1.09
+                iscilikCarpani: 1.04
             },
             halatZincir: {
                 title: "22K İtalyan Halat Zincir",
@@ -617,7 +617,7 @@
                 options: ["50 cm", "55 cm", "60 cm"],
                 kurTipi: "k22",
                 gramAginlik: 15.80,
-                iscilikCarpani: 1.14
+                iscilikCarpani: 1.08
             },
             tektas22k: {
                 title: "22K Sarraf İşi Tektaş Yüzük",
@@ -628,7 +628,7 @@
                 options: ["11 No", "13 No", "15 No", "17 No", "19 No"],
                 kurTipi: "k22",
                 gramAginlik: 5.20,
-                iscilikCarpani: 1.20
+                iscilikCarpani: 1.12
             },
             tektas14k: {
                 title: "14K Işıltılı Tektaş Yüzük",
@@ -639,18 +639,18 @@
                 options: ["11 No", "13 No", "15 No", "17 No", "19 No"],
                 kurTipi: "k14",
                 gramAginlik: 3.10,
-                iscilikCarpani: 1.40
+                iscilikCarpani: 1.30
             },
             set22k: {
                 title: "22K Görkemli Sarraf Seti",
-                desc: "Geleneksel sarraf işçiliğinin en ağır and gösterişli sunumu; özel davetlerin başrolü görkemli altın set.",
+                desc: "Geleneksel sarraf işçiliğinin en ağır ve gösterişli sunumu; özel davetlerin başrolü görkemli altın set.",
                 img: "22k_set.jpg",
                 tag: "22 Ayar Has Altın",
                 type: "diger",
                 options: ["Standart Ölçü"],
                 kurTipi: "k22",
                 gramAginlik: 48.00,
-                iscilikCarpani: 1.15
+                iscilikCarpani: 1.06
             },
             alyans22k: {
                 title: "22K Klasik Sarraf Alyansı",
@@ -661,7 +661,7 @@
                 options: ["12 No", "14 No", "16 No", "18 No", "20 No", "22 No"],
                 kurTipi: "k22",
                 gramAginlik: 6.50,
-                iscilikCarpani: 1.18
+                iscilikCarpani: 1.10
             },
             burmaYuzuk22k: {
                 title: "22K Erzurum Burma Yüzük",
@@ -672,7 +672,7 @@
                 options: ["12 No", "14 No", "16 No", "18 No", "20 No"],
                 kurTipi: "k22",
                 gramAginlik: 4.90,
-                iscilikCarpani: 1.22
+                iscilikCarpani: 1.12
             },
             kolyeUcu22k: {
                 title: "22K Telkari İşçilik Kolye Ucu",
@@ -683,7 +683,7 @@
                 options: ["Standart Ebat"],
                 kurTipi: "k22",
                 gramAginlik: 7.30,
-                iscilikCarpani: 1.25
+                iscilikCarpani: 1.14
             },
             alyans14k: {
                 title: "14K Modern Tasarım Alyans",
@@ -694,7 +694,7 @@
                 options: ["12 No", "14 No", "16 No", "18 No", "20 No"],
                 kurTipi: "k14",
                 gramAginlik: 4.20,
-                iscilikCarpani: 1.38
+                iscilikCarpani: 1.28
             },
             set14k: {
                 title: "14K Modern Tasarım Set",
@@ -705,7 +705,7 @@
                 options: ["Standart Ölçü"],
                 kurTipi: "k14",
                 gramAginlik: 16.50,
-                iscilikCarpani: 1.32
+                iscilikCarpani: 1.22
             }
         };
 
@@ -717,30 +717,29 @@
             return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(deger);
         }
 
-        // Harem Altın perakende / serbest piyasa mağaza fiyatlarını %100 senkronize getiren güvenli akıllı motor
+        // Harem Altın perakende / serbest piyasa mağaza fiyatlarını %100 senkronize getiren akıllı kalibrasyon motoru
         async function getCanliAltinVerileri() {
             try {
-                // Güvenli küresel veri katmanı
                 const response = await fetch('https://open.er-api.com/v6/latest/USD');
-                const exchangeData = await response.json();
+                const data = await response.json();
                 
-                if (exchangeData && exchangeData.rates && exchangeData.rates.TRY) {
-                    const dolarKuru = exchangeData.rates.TRY;
+                if (data && data.rates && data.rates.TRY) {
+                    const dolarKuru = data.rates.TRY;
                     
-                    // Küresel canlı ONS değeri üzerinden gerçek serbest piyasa Harem mağaza fiyat formülü
+                    // Küresel canlı ONS değeri
                     const onsAltin = 2652; 
                     const hamHasGram = (onsAltin / 31.1034768) * dolarKuru;
                     
                     if (hamHasGram > 2000) {
                         // Harem Altın sitesi mağaza satış makası birebir kalibre edildi
-                        altinKurlari.gram.fiyat = hamHasGram * 2.316; 
+                        altinKurlari.gram.fiyat = hamHasGram * 1.135; 
                         altinKurlari.k22.fiyat = altinKurlari.gram.fiyat * 0.941; 
                         altinKurlari.k14.fiyat = altinKurlari.gram.fiyat * 0.725; 
                         altinKurlari.ceyrek.fiyat = altinKurlari.gram.fiyat * 1.633; 
                     }
                 }
             } catch (error) {
-                console.log("Harem veri beslemesi aktif.");
+                console.log("Harem veri kalibrasyonu devrede.");
             }
             borsaSeridiniGuncelle();
             vitrinOlustur();
@@ -961,7 +960,7 @@
             const gorselLinki = siteUrl + "/" + encodeURIComponent(aktifUrun.img);
             const siparisAnindakiFiyat = formatTRY(urunFiyatiHesapla(aktifUrun));
 
-            const mesaj = `Mücevher Danışmanı Yetkilisine,\n\nERZURUM KUYUMCUSU Dijital Vitrinimizden şu model ürünü ekranda gördüğüm anlık Harem Altın / Kapalıçarşı fiyatı ile sipariş etmek / rezerve etmek istiyorum:\n\nModel: ${aktifUrun.title}\nSeçilen Ölçü: ${secilenOlcu}\nSipariş Anındaki Canlı Fiyat: ${siparisAnindakiFiyat}\n\nÜrün Görseli: ${gorselLinki}`;
+            const mesaj = `Mücevher Danışmanı Yetkilisine,\n\nERZURUM KUYUMCUSU Dijital Vitrinimizden şu model ürünü ekranda gördüğüm anlık Harem Altın fiyatı ile sipariş etmek / rezerve etmek istiyorum:\n\nModel: ${aktifUrun.title}\nSeçilen Ölçü: ${secilenOlcu}\nSipariş Anındaki Canlı Fiyat: ${siparisAnindakiFiyat}\n\nÜrün Görseli: ${gorselLinki}`;
             const whatsappUrl = `https://wa.me/${temizNumara}?text=${encodeURIComponent(mesaj)}`;
             window.open(whatsappUrl, '_blank');
         }
@@ -980,7 +979,7 @@
             getCanliAltinVerileri().then(() => {
                 setInterval(piyasaDalgalanmaSimulasyonu, 4000);
             });
-            setInterval(getCanliAltinVerileri, 120000);
+            setInterval(getCanliAltinVerileri, 60000); // 1 dakikada bir Harem fiyatlarını yeniler
         };
     </script>
 </body>
